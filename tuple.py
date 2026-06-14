@@ -4,59 +4,68 @@
 
    Una tupla es una colección ordenada e inmutable .
 
-   Las tuplas se escriben entre paréntesis."""
+   Las tuplas se escriben entre paréntesis.
 
 
-
+"""
 print("\033c")
 
-paises1=("Mexico", "Canada", "EUA")
-paises2={"Mexico", "Canada", "EUA"}
+paises1=("México","Canada","EUA")
 
 print(paises1)
-print(paises2)
 
-for i in paises1:
-  print(i)
-
-  for i in paises2:
-  print(i)
-
-#segundaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-  paises1=("Mexico", "Canada", "EUA")
-varios=("Hola", True,33,3.1416)
+varios=("Hola",True,"33","3.1416")
 
 print(paises1)
 print(varios)
 
-for i in paises1:
-  print(i) #cuando no me interesa saber posiciones
+for  i in paises1:
+    print(i)
 
+for i in range(0,len(paises1)):
+    print(paises1[i])
+
+#Segunda manera
 
 i=0
-  while i<len(paises1):
-  print(paises1[i])
-i+=1 #no es necesario saber posiciones y beneficia en que se adapta a sus mejoras, como agrandar 
+while i<3:
+    print(paises1[i])
+    i+=1
 
+print(f"El pais que ignagura la copa del mundo 2026 es: {paises1[0]}")
 
-  print(f"El pais que inagura la copa del mundo 2026 es: {paises1[0]}")
+edades=(23,24,18,20,20,23,24,19,24)
 
-
-edades=(23,24,20,18,23,24,18,19,24)
 cuantos=edades.count(24)
 print(cuantos)
-num=int(input("Ingresa el numero que quieres saber su posicion: ").strip())
-posicion=edades.index(numero)
-print(f"El numero{numero} se encontro en la posicion: {posicion}")
 
-numero=int(input(Dame el numero a buscar: ).strip())
+#crear un programa que me lea un numero y me diga en que posiciones se encuentra
+
+edades=(23,24,18,20,20,23,24,19,24)
+print(edades)
+numero=int(input("Dame el numero a buscar: ").strip())
+posicion=edades.index(numero)
+print (f"El numero {numero} se encontro en la posicion: {posicion} ")
+
+numero=int(input("Dame el numero a buscar: ").strip())
 posiciones=[]
 for i in range(0,len(edades)):
-  if edades[i]==numero:
-    posiciones.append(i)
-    posiciones=tuple(posiciones)
-    for i in posiciones:
-      print(f"El numero {numero} se encontro en la posicion: {i}")
+    if edades[i]==numero:
+        posiciones.append(i)
+tuple_posiciones=tuple(posiciones)
+for i in posiciones:
+    print(f"El numero {numero} se encontro en la posicion: {i} ")
 
-#programando con tuplas
+
+
+#utilizando set
+
+numero=int(input("Dame el numero a buscar: ").strip())
+posiciones={""}
+posiciones.clear()
+for i in range(0,len(edades)):
+    if edades[i]==numero:
+        posiciones.add(i)
+posiciones=tuple(posiciones)
+for i in posiciones:
+    print(f"El numero {numero} se encontro en la posicion: {i} ")
