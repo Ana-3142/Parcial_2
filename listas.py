@@ -85,9 +85,9 @@ if true=="false":
 #Ejemplo 4 Crear una lista multidimensional que permita almacenar el nombre y telefono de una agenda
 #multilistas
 agenda=[
-    ["Jade", "6183718706"],
-    ["Ana", "6183718767"],
-    ["Key", "6183718996"]
+    ["Carlos", "6181234567"],
+    ["Adrian", "6182332456"],
+    ["Luis", "6182223444"]
 ]
 
 print(agenda)
