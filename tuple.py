@@ -25,7 +25,7 @@ for  i in paises1:
 for i in range(0,len(paises1)):
     print(paises1[i])
 
-#Segunda manera
+# Segunda manera
 
 i=0
 while i<3:
